@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "style.css"></link>
+</head>
+<body>
+    <div class="cursor">
+        <img class="cursorImg hidden" src="images/KakaoTalk_20230911_121243428.png" alt="">
+        <p class="cursorText hidden"></p>
+    </div>
+
+    <div id="canvasContainer">
+        <canvas></canvas>
+        <img src="images/canvasillustration.jpg" style="width:1200px; height:1571px;" alt="캔버스">
+    </div>
+    <div id="menuContainer">
+        <div id="palletContainer">
+            <img src="images/binPallet.jpg" id="palletImg" height="500px;" width="800px;" alt="팔레트"/>
+            <input type="color" id = "color">
+            <div>
+                <div class="color-option color-a" style="background-color: #ff3838" data-color="#ff3838"></div>
+                <div class="color-option color-b" style="background-color: #ffb8b8" data-color="#ffb8b8"></div>
+                <div class="color-option color-c" style="background-color: #c56cf0" data-color="#c56cf0"></div>
+                <div class="color-option color-d" style="background-color: #ff9f1a" data-color="#ff9f1a"></div>
+                <div class="color-option color-e" style="background-color: #fff200" data-color="#fff200"></div>
+                <div class="color-option color-f" style="background-color: #32ff73" data-color="#32ff73"></div>
+                <div class="color-option color-g" style="background-color: #7efff5" data-color="#7efff5"></div>
+                <div class="color-option color-h" style="background-color: #18dcff" data-color="#18dcff"></div>
+                <div class="color-option color-i" style="background-color: #7d5fff" data-color="#7d5fff"></div>
+            </div>
+        </div>
+        <div id="rotationWithSizeContainer">
+            <div id ="sizeContainer">
+                <h1 id = "line-width-text">size : 0</h1>
+                <input id ="line-width" type = "range" min = "1" max = "100" value="50" step="1"/>
+            </div>
+            <div id ="rotationContainer">
+                <h1 id = "img-rotation-text">rotation : 0</h1>
+                <input id ="img-rotation" type = "range" min = "-180" max = "180" value="0" step="1"/>
+            </div>
+        </div>
+
+        <button id="mode-btn">Mode : 🖌️</button>
+
+        <div id="destroyWithEraser">
+            <button id="destroy-btn">destroy 🗑️</button>
+            <button id="eraser-btn">eraser 🧻</button>
+        </div>
+        <input type = "text" placeholder="쓰고 따블클릭해라" id="text">
+
+        <div id="saveWithStickerContainer">
+            <button id="save">Save</button>
+            <label id="fileLabel" for="file">
+                <h1>STICKER</h1>
+            </label>
+            <input type="file" accept="image/*" id="file"/>
+        </div>
+        
+        
+    </div>
+    <script src = "app.js"></script>
+</body>
+</html>
